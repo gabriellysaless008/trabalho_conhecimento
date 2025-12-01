@@ -9,6 +9,10 @@ function getCampo(){
     
 }
 
+function adicionarVetor(){
+    vetor[0] = document.getElementById("campo").value;
+}
+
 
 
 
