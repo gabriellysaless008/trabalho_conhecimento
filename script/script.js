@@ -1,6 +1,8 @@
 function adicionarNaLista(){
+    let vetor = adicionarVetor(); //<---- deu erro, dizendo que não esta definida !!!
     let valor = getCampo();
-    console.log (valor);
+    console.log(valor);
+    console.log(vetor);
 
 }
 
@@ -10,7 +12,7 @@ function getCampo(){
 }
 
 function adicionarVetor(){
-    vetor[0] = document.getElementById("campo").value;
+    vetor[0] = document.getElementById("campo").value; //<----- erro aqui, verificar depois !!!
 }
 
 
