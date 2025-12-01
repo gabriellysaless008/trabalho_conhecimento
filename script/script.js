@@ -1,5 +1,12 @@
 function adicionarNaLista(){
-    console.log ("batatinha");
+    let valor = getCampo();
+    console.log (valor);
+
+}
+
+function getCampo(){
+    return document.getElementById("campo").value;
+    
 }
 
 
