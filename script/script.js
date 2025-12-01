@@ -1,5 +1,5 @@
 let vetor = [];
-let contador;
+let contador = 0;
 //contador = vetor;
 
 function adicionarNaLista(){
@@ -7,8 +7,9 @@ function adicionarNaLista(){
     adicionarVetor();
     imprimirAInformacao();
     limparCombobox();
+    setCursor();
     //console.log(valor);
-    //console.log(vetor);
+    console.log(vetor);
 }
 
 function getCampo(){
@@ -16,7 +17,7 @@ function getCampo(){
 }
 
 function adicionarVetor(){
-    vetor[0] = document.getElementById("campo").value;
+    vetor[0] = getCampo();
     contador = contador + 1;
 }
 
@@ -26,6 +27,10 @@ function imprimirAInformacao(){
 
 function limparCombobox(){
     document.getElementById("campo").value = "";
+}
+
+function setCursor(){
+    document.getElementById("campo").focus();
 }
 
 
