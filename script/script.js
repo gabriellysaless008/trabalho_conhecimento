@@ -4,8 +4,9 @@ let vetor = [];
 function adicionarNaLista(){
     let valor = getCampo();
     adicionarVetor();
+    imprimirAInformacao();
     console.log(valor);
-    console.log(vetor);
+    //console.log(vetor);
 
 }
 
@@ -16,6 +17,24 @@ function getCampo(){
 
 function adicionarVetor(){
     vetor[0] = document.getElementById("campo").value;
+
+
+}
+
+function imprimirAInformacao(){
+    document.getElementById("mensagem").textContent = vetor[0];
+
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
