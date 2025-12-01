@@ -1,24 +1,33 @@
 let vetor = [];
-let contador = 0;
+
+//let contador = 0;
+
+const CAMPO = "campo";
+
 //contador = vetor;
 
 function adicionarNaLista(){
-    let valor = getCampo();
+    getCampo();
+    
     adicionarVetor();
+
     imprimirAInformacao();
+
     limparCombobox();
+
     setCursor();
+
     //console.log(valor);
-    console.log(vetor);
+    //console.log(vetor);
 }
 
 function getCampo(){
-    return document.getElementById("campo").value;   
+    return document.getElementById( CAMPO ).value;   
 }
 
 function adicionarVetor(){
     vetor[0] = getCampo();
-    contador = contador + 1;
+    //contador = contador + 1;
 }
 
 function imprimirAInformacao(){
@@ -26,12 +35,13 @@ function imprimirAInformacao(){
 }
 
 function limparCombobox(){
-    document.getElementById("campo").value = "";
+    document.getElementById( CAMPO ).value = "";
 }
 
 function setCursor(){
-    document.getElementById("campo").focus();
+    document.getElementById( CAMPO ).focus();
 }
+
 
 
 
