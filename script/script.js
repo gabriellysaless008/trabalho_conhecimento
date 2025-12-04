@@ -1,4 +1,6 @@
+//0          //1             //2           //3
 let vetor = [];
+
 
 //let contador = 0;
 
@@ -11,7 +13,7 @@ function adicionarNaLista(){
     
     adicionarVetor();
 
-    imprimirAInformacao();
+   
 
     limparCombobox();
 
@@ -42,9 +44,21 @@ function setCursor(){
     document.getElementById( CAMPO ).focus();
 }
 
+function imprimir() {       
+    
+    console.log( vetor.length );
+                                                                                // i = i - 1       i--
+                                                                         // contador = contador + 1      contador++
+    for (let index = 0; index < vetor.length; index++ ) {
+        
+        console.log( vetor[index] );
+        document.getElementById("mensagem").textContent = vetor[0];
+        
+    }
 
 
 
+}
 
 
 
