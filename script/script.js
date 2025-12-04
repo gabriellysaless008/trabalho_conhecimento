@@ -1,6 +1,7 @@
 //0          //1             //2           //3
 let vetor = [];
 
+let index = 0;
 
 //let contador = 0;
 
@@ -28,8 +29,14 @@ function getCampo(){
 }
 
 function adicionarVetor(){
-    vetor[0] = getCampo();
-    //contador = contador + 1;
+    vetor[index] = getCampo();
+    index++;
+
+    const lista = document.getElementById("mensagem");
+
+    lista.innerHTML = vetor[index];
+
+
 }
 
 function imprimirAInformacao(){
@@ -47,8 +54,6 @@ function setCursor(){
 function imprimir() {       
     
     console.log( vetor.length );
-                                                                                // i = i - 1       i--
-                                                                         // contador = contador + 1      contador++
     for (let index = 0; index < vetor.length; index++ ) {
         
         console.log( vetor[index] );
@@ -56,8 +61,7 @@ function imprimir() {
         
     }
 
-
-
+   
 }
 
 
