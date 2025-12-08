@@ -1,7 +1,6 @@
-//0          //1             //2           //3
 let vetor = [];
 
-let index = 0;
+//let index = 0;
 
 //let contador = 0;
 
@@ -13,8 +12,6 @@ function adicionarNaLista(){
     getCampo();
     
     adicionarVetor();
-
-   
 
     limparCombobox();
 
@@ -28,26 +25,36 @@ function getCampo(){
     return document.getElementById( CAMPO ).value;   
 }
 
-function adicionarVetor(){
-    vetor[index] = getCampo();
-    index++;
+function adicionarVetor() {
+
+    vetor.push( getCampo() );
+
+    console.log(vetor);
+    
+    //vetor[index] = getCampo();
+    
+    //index++;
 
     const lista = document.getElementById("mensagem");
 
-    lista.innerHTML = vetor[index];
+    lista.innerHTML =  vetor[ getElemento( getCampo() ) ];
 
 
 }
 
-function imprimirAInformacao(){
+function getElemento( nomeDaFruta ) {
+    return vetor.indexOf( nomeDaFruta );
+}
+
+function imprimirAInformacao() {
     document.getElementById("mensagem").textContent = vetor[0];
 }
 
-function limparCombobox(){
+function limparCombobox() {
     document.getElementById( CAMPO ).value = "";
 }
 
-function setCursor(){
+function setCursor() {
     document.getElementById( CAMPO ).focus();
 }
 
@@ -63,6 +70,7 @@ function imprimir() {
 
    
 }
+
 
 
 
